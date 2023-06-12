@@ -730,6 +730,11 @@ body {
         color: var(--title-color);
 }
 
+.label-wrapper {
+
+        margin-bottom: 8px;
+}
+
 .form-label {
         display: block;
         font-size: 12px;
