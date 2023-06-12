@@ -734,7 +734,9 @@ body {
 
         margin-bottom: 8px;
 }
-
+.comments {
+        margin-bottom: 16px;
+}
 .form-label {
         display: block;
         font-size: 12px;
@@ -813,4 +815,25 @@ body {
 
 .checkbox-wrapper {
         margin-bottom: 24px;
+}
+
+.form-submit-btn {
+        display: block;
+        margin: 0 auto;
+        min-width: 169px;
+        height: 56px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #ffffff;
+        cursor: pointer;
+        background-color: #4D5AE5;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-submit-btn:focus {
+        outline: none;
+        background-color: #404BBF;
 }
