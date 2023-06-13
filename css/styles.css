@@ -746,9 +746,6 @@ body {
         margin-bottom: 4px;
 }
 
-.form-label:not(:first-child) {
-        margin-top: 8px;
-}
 
 .form-input {
         width: 360px;
@@ -765,10 +762,6 @@ body {
 .textarea {
         height: 120px;
         width: 360px;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: rgba(46, 47, 66, 0.4);
         background-color: transparent;
         padding: 8px 16px;
         outline: transparent;
@@ -776,6 +769,13 @@ body {
         border-radius: 4px;
         resize: none;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea::placeholder {
+        color: rgba(46, 47, 66, 0.4);
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
 }
 
 .textarea:focus {
@@ -802,11 +802,25 @@ body {
         fill: #4D5AE5;
 }
 
+
+
 .check-desc {
+        display: flex;
         font-size: 12px;
         line-height: 1.17;
         letter-spacing: 0.04em;
-        color: #8E8F99;
+        color: #8E8F99;  
+}
+
+.check-desc::before {
+        content: " ";
+        width: 16px;
+        height: 16px;
+        display: block;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        border-radius: 2px;
+        margin-right: 8px;
+
 }
 
 .modal-form-input-wrapper {
@@ -833,7 +847,42 @@ body {
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-submit-btn:hover {
+        outline: none;
+        background-color: #404BBF;
+}
+
 .form-submit-btn:focus {
         outline: none;
         background-color: #404BBF;
+}
+
+.form-check:checked + .check-desc::before {
+        background-color: #404BBF;
+        border: 1px solid #404BBF;
+        border-radius: 2px;
+        background-image: url(../images/check-icon.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+.form-check:focus +.check-desc::before {
+        background-color: #404BBF;
+        border: 1px solid #404BBF;
+        border-radius: 2px;
+        background-image: url(../images/check-icon.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+}
+
+.visually-hidden {
+
+       
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
 }
